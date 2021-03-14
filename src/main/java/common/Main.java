@@ -1,8 +1,10 @@
+package common;
+
 import java.util.Random;
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws BaseException {
         // Моделироание ошибки «NullPointerException»
         try {
             String str = null;
@@ -22,12 +24,9 @@ public class Main {
             System.out.println("ArrayIndexOutOfBoundsException!!!");
         }
 
-        // Моделирование своего варианта ошибки через оператор throw
-        try {
-            throw new Exception();
+        //Вызвать свой вариант ошибки через оператор throw
+        throw new BaseException("Exception!!!");
 
-        } catch (Exception ex) {
-            System.out.println("Exception!!!");
-        }
+
     }
 }
